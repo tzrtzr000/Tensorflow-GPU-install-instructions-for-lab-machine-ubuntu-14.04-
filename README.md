@@ -1,4 +1,4 @@
-# Tensorflow GPU install on ubuntu 16.04    
+# Tensorflow GPU install on ubuntu 14.04 (lab machine)    
 
 
 0. update apt-get   
@@ -8,13 +8,13 @@ sudo apt-get update
    
 1. Install apt-get deps  
 ``` bash
-sudo apt-get install openjdk-8-jdk git python-dev python3-dev python-numpy python3-numpy build-essential python-pip python3-pip python-virtualenv swig python-wheel libcurl3-dev   
+sudo apt-get install git python-dev python3-dev python-numpy python3-numpy build-essential python-pip python3-pip python-virtualenv swig python-wheel libcurl3-dev   
 ```
 
 2. install nvidia drivers 
 ``` bash
-# The 16.04 installer works with 16.10.
-curl -O http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/cuda-repo-ubuntu1604_8.0.61-1_amd64.deb
+# The 14.04 installer works with 14.10.
+curl -O http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1404/x86_64/cuda-repo-ubuntu1404_8.0.61-1_amd64.deb
 dpkg -i ./cuda-repo-ubuntu1604_8.0.61-1_amd64.deb
 apt-get update
 apt-get install cuda -y
@@ -120,10 +120,14 @@ conda create -n tensorflow
 source activate tensorflow   
 ```
 
-11. Install tensorflow with GPU support for python 3.6    
+11. Install tensorflow with GPU support for python 2.7 for r0.11 Version 
 ``` bash
 # pip install --ignore-installed --upgrade aTFUrl
-pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow_gpu-1.2.0-cp36-cp36m-linux_x86_64.whl
+pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow-0.11.0rc2-cp27-none-linux_x86_64.whl
+
+# if not working try downloading and then installing locally:
+# wget https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow-0.11.0rc2-cp27-none-linux_x86_64.whl 
+# pip install --ignore-installed --upgrade tensorflow-0.11.0rc2-cp27-none-linux_x86_64.whl
 ```   
 
 12. Test tf install   
