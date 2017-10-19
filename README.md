@@ -32,7 +32,7 @@ nvidia-smi
 3. install cuda toolkit (MAKE SURE TO SELECT N TO INSTALL NVIDIA DRIVERS)
 ``` bash
 wget https://s3.amazonaws.com/personal-waf/cuda_8.0.61_375.26_linux.run 
-# for cuda 9.0: https://s3.amazonaws.com/tzr-tools/cuda-toolkit/cuda_9.0.176_384.81_linux.run
+# Alternative: https://s3.amazonaws.com/tzr-tools/GPU-Support/cuda_8.0.61_375.26_linux.run
 
 sudo sh cuda_8.0.61_375.26_linux.run   # press and hold s to skip agreement   
 
