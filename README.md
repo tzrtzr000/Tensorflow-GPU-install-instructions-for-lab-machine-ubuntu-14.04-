@@ -15,6 +15,7 @@ sudo apt-get install git python-dev python3-dev python-numpy python3-numpy build
 ``` bash
 # The 14.04 installer works with 14.10.
 curl -O http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1404/x86_64/cuda-repo-ubuntu1404_8.0.61-1_amd64.deb
+# For 16.04: curl -O http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1464/x86_64/cuda-repo-ubuntu1604_8.0.61-1_amd64.deb
 dpkg -i ./cuda-repo-ubuntu1604_8.0.61-1_amd64.deb
 sudo apt-get update
 sudo apt-get install cuda -y
@@ -30,8 +31,12 @@ nvidia-smi
 
 3. install cuda toolkit (MAKE SURE TO SELECT N TO INSTALL NVIDIA DRIVERS)
 ``` bash
-wget https://s3.amazonaws.com/personal-waf/cuda_8.0.61_375.26_linux.run   
+wget https://s3.amazonaws.com/personal-waf/cuda_8.0.61_375.26_linux.run 
+# for cuda 9.0: https://s3.amazonaws.com/tzr-tools/cuda-toolkit/cuda_9.0.176_384.81_linux.run
+
 sudo sh cuda_8.0.61_375.26_linux.run   # press and hold s to skip agreement   
+
+# for cuda 9.0: sudo sh cuda_9.0.176_384.81_linux.run
 
 # Do you accept the previously read EULA?
 # accept
@@ -66,7 +71,8 @@ sudo sh cuda_8.0.61_375.26_linux.run   # press and hold s to skip agreement
 
 4. Install cudnn   
 ``` bash
-wget https://s3.amazonaws.com/personal-waf/cudnn-8.0-linux-x64-v5.1.tgz   
+wget https://s3.amazonaws.com/personal-waf/cudnn-8.0-linux-x64-v5.1.tgz
+# wget https://s3.amazonaws.com/tzr-tools/GPU-Support/cudnn-8.0-linux-x64-v5.0-ga.tgz
 sudo tar -xzvf cudnn-8.0-linux-x64-v5.1.tgz   
 sudo cp cuda/include/cudnn.h /usr/local/cuda/include
 sudo cp cuda/lib64/libcudnn* /usr/local/cuda/lib64
@@ -84,7 +90,7 @@ export CUDA_HOME=/usr/local/cuda
 source ~/.bashrc
 ```   
 
-7. Install miniconda   
+7. Install miniconda  ( or [Install pip and virtualenv](https://www.saltycrane.com/blog/2010/02/how-install-pip-ubuntu/))
 ``` bash
 wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
 bash Miniconda3-latest-Linux-x86_64.sh   
