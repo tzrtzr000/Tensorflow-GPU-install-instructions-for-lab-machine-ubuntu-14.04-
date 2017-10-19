@@ -16,8 +16,8 @@ sudo apt-get install git python-dev python3-dev python-numpy python3-numpy build
 # The 14.04 installer works with 14.10.
 curl -O http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1404/x86_64/cuda-repo-ubuntu1404_8.0.61-1_amd64.deb
 dpkg -i ./cuda-repo-ubuntu1604_8.0.61-1_amd64.deb
-apt-get update
-apt-get install cuda -y
+sudo apt-get update
+sudo apt-get install cuda -y
 ```  
 
 2a. check nvidia driver install 
