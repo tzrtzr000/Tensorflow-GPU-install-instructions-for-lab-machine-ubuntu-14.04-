@@ -1,4 +1,4 @@
-# Tensorflow GPU install on ubuntu 14.04 (lab machine)    
+# Tensorflow GPU installation on ubuntu 14.04 or 16.04(lab machine)    
 
 
 0. update apt-get   
