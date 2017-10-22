@@ -82,7 +82,7 @@ sudo chmod a+r /usr/local/cuda/include/cudnn.h /usr/local/cuda/lib64/libcudnn*
 5. Add these lines to end of ~/.bashrc:   
 ``` bash
 export LD_LIBRARY_PATH=/usr/local/cuda/lib64
-export PATH="$PATH:/usr/local/cuda-8.0/bin"
+export PATH="/usr/local/cuda/bin:/usr/local/cuda-8.0/bin:$PATH"
 sudo ldconfig
 export CUDA_HOME=/usr/local/cuda
 ```   
