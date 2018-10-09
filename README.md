@@ -79,7 +79,7 @@ sudo cp cuda/lib64/libcudnn* /usr/local/cuda/lib64
 sudo chmod a+r /usr/local/cuda/include/cudnn.h /usr/local/cuda/lib64/libcudnn*
 ```    
 
-5. Add these lines to end of ~/.bashrc:   
+5. Add the following command lines to the end of ~/.bashrc:   
 ``` bash
 export LD_LIBRARY_PATH=/usr/local/cuda/lib64
 export PATH="/usr/local/cuda/bin:/usr/local/cuda-8.0/bin:$PATH"
