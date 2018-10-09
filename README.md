@@ -34,6 +34,9 @@ nvidia-smi
 wget https://s3.amazonaws.com/personal-waf/cuda_8.0.61_375.26_linux.run 
 # Alternative: https://s3.amazonaws.com/tzr-tools/GPU-Support/cuda_8.0.61_375.26_linux.run
 
+for installing multiple CUDA versions in a machine:
+https://blog.kovalevskyi.com/multiple-version-of-cuda-libraries-on-the-same-machine-b9502d50ae77
+
 sudo sh cuda_8.0.61_375.26_linux.run   # press and hold s to skip agreement   
 
 # for cuda 9.0: sudo sh cuda_9.0.176_384.81_linux.run
